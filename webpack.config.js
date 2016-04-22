@@ -17,7 +17,9 @@ const wpConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      ENV_MODE: process.env.NODE_ENV
+      'process.env':{
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ],
   module: {
@@ -31,7 +33,6 @@ const wpConfig = {
         }
       }
     ]
-    
   }
 };
 
@@ -41,6 +42,13 @@ if(!DEV){
     exclude: /node_modules/,
     loader: strip.loader('console.log')
   });
+  wpConfig.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    })
+  );
 }
 
 module.exports = wpConfig;

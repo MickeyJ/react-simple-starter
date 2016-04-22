@@ -6,6 +6,10 @@ class Layout extends Component{
     return(
       <div>
         <h1>{this.props.title}</h1>
+        
+        <h5 style={{color: 'red'}}>
+          {process.env.NODE_ENV.toUpperCase()}
+        </h5>
       </div>
     )
   }

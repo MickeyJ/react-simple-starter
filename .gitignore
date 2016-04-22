@@ -1,1 +1,7 @@
+
+# -- Always Ignore --
 node_modules
+
+
+# -- Deployment Files --
+public/bundle.js
