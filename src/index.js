@@ -2,17 +2,15 @@ import React, { Component } from 'react'
 import ReactDOM, { render } from 'react-dom'
 
 import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 class Layout extends Component{
   render(){
     return(
       <div>
-        
         <Header title={this.props.title}/>
         
-        <h5 style={{color: 'red'}}>
-          {process.env.NODE_ENV.toUpperCase()}
-        </h5>
+        <Footer title={this.props.title}/>
       </div>
     )
   }
