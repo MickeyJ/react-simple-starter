@@ -1,6 +1,6 @@
+const webpack = require('webpack');
 const strip = require('strip-loader');
 const DEV = process.env.NODE_ENV==='development';
-const webpack = require('webpack');
 
 const wpConfig = {
   entry: './src/',

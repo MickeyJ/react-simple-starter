@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import ReactDOM, { render } from 'react-dom'
 
+import Header from './Header/Header'
+
 class Layout extends Component{
   render(){
     return(
       <div>
-        <h1>{this.props.title}</h1>
+        
+        <Header title={this.props.title}/>
         
         <h5 style={{color: 'red'}}>
           {process.env.NODE_ENV.toUpperCase()}
